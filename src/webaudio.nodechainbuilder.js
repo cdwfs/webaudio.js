@@ -172,3 +172,13 @@ WebAudio.NodeChainBuilder.prototype.gainNode	= function(properties){
 	return this._addNode(node, properties)
 };
 
+/**
+ * add a filter
+ *
+ * @param {Object} [properties] properties to set in the created node
+*/
+WebAudio.NodeChainBuilder.prototype.filter	= function(properties){
+	var node		= this._context.createBiquadFilter()
+	this._nodes.filter	= node;
+	return this._addNode(node, properties)
+};
